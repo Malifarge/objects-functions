@@ -27,3 +27,20 @@ const cat2 ={
 
   console.log(cats[0].age);
   console.log(cats[1].isCute);  
+
+//   03 - Even
+
+const checkIfEven = (num) =>{
+    if (num%2===0){
+        console.log("even");
+    }else if (num%2===1){
+        console.log("odd");
+    }else{
+        console.log("not a number");
+    }
+}
+
+checkIfEven(5)
+checkIfEven(1359)
+checkIfEven("Even")
+checkIfEven(3416541*35456)
