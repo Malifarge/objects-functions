@@ -83,3 +83,25 @@ const format = (num) =>{
 }
 
 format(3700)
+
+// 07 - Password generation
+
+const generatePassword = (num) =>{
+    let password = []
+    let letter = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+    if (num < 6 || num > 15){
+        console.log("error");
+    }else{
+        for (i=0; i<num;i++){
+            let random = Math.floor(Math.random()*letter.length)
+            password[i]=letter[random]
+        }
+        console.log(password.join(""));
+    }
+}
+
+generatePassword(5)
+generatePassword(18)
+generatePassword(12)
+generatePassword(6)
+generatePassword(8)
