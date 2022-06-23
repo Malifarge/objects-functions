@@ -44,3 +44,19 @@ checkIfEven(5)
 checkIfEven(1359)
 checkIfEven("Even")
 checkIfEven(3416541*35456)
+
+// 04 - Compare
+
+const compare = (x,y) =>{
+    if (x > y){
+        console.log(`${x} is bigger`);
+    }else if (y > x){
+        console.log(`${y} is bigger`);
+    }else {
+        console.log("both are the same");
+    }
+}
+
+compare(35**68, 590)
+compare(-5, 3)
+compare(2*10 , 40/2)
