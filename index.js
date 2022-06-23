@@ -72,3 +72,14 @@ const addUp = (num) =>{
 }
 
 addUp(12)
+
+// 06 - Time
+
+const format = (num) =>{
+    let hour = Math.floor(num/3600)
+    let minute = Math.floor((num-(hour*3600))/60)
+    let seconde = num - ((hour*3600) + (minute*60))
+    console.log(`${hour} : ${minute} : ${seconde}`);
+}
+
+format(3700)
