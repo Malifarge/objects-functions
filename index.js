@@ -93,7 +93,7 @@ const generatePassword = (num) =>{
         console.log("error");
     }else{
         for (i=0; i<num;i++){
-            let random = Math.floor(Math.random()*letter.length)
+            const random = Math.floor(Math.random()*letter.length)
             password[i]=letter[random]
         }
         console.log(password.join(""));
@@ -105,3 +105,16 @@ generatePassword(18)
 generatePassword(12)
 generatePassword(6)
 generatePassword(8)
+
+// 08 - Let’s play
+
+const lauchDice = (numberOfDice) =>{
+    let result = 0
+    for (i=1; i<=numberOfDice;i++){
+        const random = Math.floor(Math.random()*6)+1
+        result += random
+    }
+    console.log(result);
+}
+
+lauchDice(30)
