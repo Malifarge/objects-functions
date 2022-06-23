@@ -60,3 +60,15 @@ const compare = (x,y) =>{
 compare(35**68, 590)
 compare(-5, 3)
 compare(2*10 , 40/2)
+
+// 05 - Add Up
+
+const addUp = (num) =>{
+    let result =0
+    for (i=0; i<=num; i++){
+        result +=i
+    }
+    console.log(result);
+}
+
+addUp(12)
