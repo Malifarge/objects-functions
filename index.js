@@ -91,8 +91,9 @@ format(3700)
 
 const generateRandomCharCode = () => {
     const min = 65
-    const max = 90 - min +1
-    const random = Math.floor(Math.random()*max)+min
+    const max = 90
+    const etendue = max-min +1
+    const random = Math.floor(Math.random()*etendue)+min
     const letter = String.fromCharCode(random)
     return letter
 }
