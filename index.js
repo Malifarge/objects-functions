@@ -23,7 +23,7 @@ const cat2 ={
     isCute :false
     }
 
-    let cats = [ cat,cat2]
+    const cats = [ cat,cat2]
 
   console.log(cats[0].age);
   console.log(cats[1].isCute);  
@@ -76,9 +76,12 @@ addUp(12)
 // 06 - Time
 
 const format = (num) =>{
-    let hour = Math.floor(num/3600)
-    let minute = Math.floor((num-(hour*3600))/60)
-    let seconde = num - ((hour*3600) + (minute*60))
+    const secondsInHour = 3600
+    const secondsInMinutes = 60
+    const hour = Math.floor(num/secondsInHour)
+    const reste = num%secondsInHour
+    const minute = Math.floor(reste/secondsInMinutes)
+    const seconde = reste%secondsInMinutes
     console.log(`${hour} : ${minute} : ${seconde}`);
 }
 
@@ -86,17 +89,28 @@ format(3700)
 
 // 07 - Password generation
 
+const generateRandomCharCode = () => {
+    const min = 65
+    const max = 90 - min +1
+    const random = Math.floor(Math.random()*max)+min
+    const letter = String.fromCharCode(random)
+    return letter
+}
+
 const generatePassword = (num) =>{
-    let password = []
-    let letter = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+    let password = ""
+    // let letter = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"] propre tableau
     if (num < 6 || num > 15){
         console.log("error");
     }else{
-        for (i=0; i<num;i++){
-            const random = Math.floor(Math.random()*letter.length)
-            password[i]=letter[random]
+        for (let i=0; i<num;i++){
+            
+            password += generateRandomCharCode()
+            // const random = Math.floor(Math.random()*letter.length) propre tableau
+            // password[i]=letter[random] propre tableau
         }
-        console.log(password.join(""));
+        // console.log(password.join("")); propre tableau
+        console.log(password);
     }
 }
 
